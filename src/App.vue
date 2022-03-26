@@ -1,18 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <br>
+    <wordRamdon />
+    <dict-index :wordkey="word" />
   </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DictIndex from './components/Dictionary/DictIndex.vue'
+import WordRamdon from './components/Dictionary/WordRamdon.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    DictIndex,
+    WordRamdon
+  },
+  data() {
+    return {
+    }
+  } 
 }
 </script>
 

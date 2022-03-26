@@ -1,0 +1,25 @@
+Paso 1.
+npm install -g @vue/cli
+vue --version
+
+Paso 2.
+Se creó el proyecto
+vue create nombre-del-proyecto
+se tomó la version 2 de vue
+
+Paso 3.
+Se creó el repositorio en github
+y se agregó el proyecto
+
+Paso 4.
+Creamos el componente dict-index
+
+Paso 5.
+llamamos al API de diccionario
+https://dictionaryapi.dev/
+
+Paso 6.
+obtenemos la definición del resultado del api, al pasarle una palabra por la url
+
+Paso 7.
+Mostrtamos el resultado en la pantalla
