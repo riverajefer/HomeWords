@@ -1,6 +1,6 @@
 <template>
   <div class="dict">
-    <h1>COMPONENT DICTIONARY</h1>
+    <h2>Component Dictionay</h2>
     <input type="text" name="word" v-model="word" id="word" />
 
     <h2>Word: {{ word }}</h2>
@@ -18,15 +18,14 @@
 
 <script>
 export default {
+  components: {},
+
   mounted() {
     this.$root.$on("emitWord", (word) => {
-      console.log(
-        "estoy en el compoenente DICTIONARY data del otro componente: ",
-        word
-      );
       this.word = word;
     });
   },
+
   data() {
     return {
       result: "",
@@ -40,6 +39,7 @@ export default {
   methods: {
     async onGetResultWord() {
       try {
+        // para resetear
         this.result = "";
         this.definition = "";
         this.example = "";
@@ -49,11 +49,10 @@ export default {
           `https://api.dictionaryapi.dev/api/v2/entries/en/${this.word}`
         );
         this.result = response;
+
         this.definition =
           this.result.data[0].meanings[0].definitions[0].definition;
         this.example = this.result.data[0].meanings[0].definitions[0].example;
-
-        console.log(this.result.data[0].phonetics[0].audio);
         this.audio = this.result.data[0].phonetics[0].audio;
       } catch (error) {
         console.log(error);

@@ -1,8 +1,9 @@
 <template>
   <div id="app">
+    <h1>Soy el componente principal</h1>
     <br>
     <wordRamdon />
-    <dict-index :wordkey="word" />
+    <dict-index  />
   </div>
   
 </template>
@@ -17,10 +18,7 @@ export default {
     DictIndex,
     WordRamdon
   },
-  data() {
-    return {
-    }
-  } 
+
 }
 </script>
 

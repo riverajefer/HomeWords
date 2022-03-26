@@ -1,39 +1,32 @@
 <template>
-    <div class="ram">
-        <h1>WordRamdon: {{wordRamdonw}}</h1>
-        <br>
-        <button @click="onGetRandomWord">Obtener palabra aleatoria</button>
-    </div>
+  <div class="ram">
+    <h2>Componente WordRamdon: {{ wordRamdonw }}</h2>
+    <br />
+    <button @click="onGetRandomWord">Obtener palabra aleatoria</button>
+  </div>
 </template>
 
 <script>
-
 export default {
-
-    data(){
-        return {
-            wordRamdonw: ''
-
-
-        }
+  data() {
+    return {
+      wordRamdonw: "",
+    };
+  },
+  methods: {
+    async onGetRandomWord() {
+      try {
+        const response = await this.$http.get(
+          "https://random-word-api.herokuapp.com/word?number=1"
+        );
+        this.wordRamdonw = response.data[0];
+        this.$root.$emit("emitWord", this.wordRamdonw);
+      } catch (error) {
+        console.log(error);
+      }
     },
-methods: {
-    async onGetRandomWord(){
-        try  {
-            const response = await this.$http.get(
-                'https://random-word-api.herokuapp.com/word?number=1'
-            );
-            this.wordRamdonw = response.data[0];
-            this.$root.$emit('emitWord', this.wordRamdonw);
-
-
-        } catch (error) {
-            console.log(error);
-        }
-        
-    }
-}
-}
+  },
+};
 </script>
 
 <style>
