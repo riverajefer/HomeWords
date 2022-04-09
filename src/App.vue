@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <h1>Soy el componente principal</h1>
-    <br>
-    <wordRamdon />
-    <dict-index  />
+    <v-container class="grey lighten-5 mb-6">
+      <v-card class="pa-6" style="padding: 15px" shaped>
+        <wordRamdon />
+        <dict-index />
+      </v-card>
+    </v-container>
   </div>
-  
 </template>
 
 <script>
-import DictIndex from './components/Dictionary/DictIndex.vue'
-import WordRamdon from './components/Dictionary/WordRamdon.vue'
+import DictIndex from "./components/Dictionary/DictIndex.vue";
+import WordRamdon from "./components/Dictionary/WordRamdon.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     DictIndex,
-    WordRamdon
+    WordRamdon,
   },
-
-}
+};
 </script>
 
 <style>
+*{
+  font-family: 'Roboto Condensed', sans-serif;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

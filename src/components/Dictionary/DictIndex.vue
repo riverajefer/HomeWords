@@ -1,13 +1,8 @@
 <template>
   <div class="dict">
-    <h2>Component Dictionay</h2>
-    <input type="text" name="word" v-model="word" id="word" />
-
-    <h2>Word: {{ word }}</h2>
-    <br />
-    <button @click="onGetResultWord()">OBTENER DEFINICIÓN</button>
-    <hr />
-
+    <div class="my-8" style="margin: 15px 0px">
+      <h1>{{ word }}</h1>
+    </div>
     <ul>
       <li v-if="definition"><b> Definition: </b> {{ definition }}</li>
       <li v-if="example"><b> Example: </b> {{ example }}</li>
@@ -22,7 +17,9 @@ export default {
 
   mounted() {
     this.$root.$on("emitWord", (word) => {
+      console.log('he recibido el evento');
       this.word = word;
+      this.onGetResultWord();
     });
   },
 
@@ -63,13 +60,22 @@ export default {
 </script>
 
 <style scoped>
-.dict {
-  width: 850px;
-  height: auto;
-  margin: 30px auto;
-  padding: 25px;
-  background-color: beige;
-  border-radius: 20px;
-  border: 1px solid black;
+
+h1 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+ul {
+  list-style-type: none;
+  text-align: justify;
+  margin: 50px 0px;
+}
+li {
+  color: #05445E;
+  margin: 10px 0px;
+  font-size: 1.2em;
+}
+audio {
+  margin-bottom: 20px;;
 }
 </style>

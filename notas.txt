@@ -23,3 +23,10 @@ obtenemos la definición del resultado del api, al pasarle una palabra por la ur
 
 Paso 7.
 Mostrtamos el resultado en la pantalla
+
+
+
+
+repo words
+
+https://github.com/dariusk/corpora/tree/master/data
