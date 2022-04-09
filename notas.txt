@@ -30,3 +30,16 @@ Mostrtamos el resultado en la pantalla
 repo words
 
 https://github.com/dariusk/corpora/tree/master/data
+
+
+
+
+Despues de clonar el proyecto
+
+npm install -g @vue/cli
+
+
+cuando se abre el proyecto en Vscode
+npm install
+
+npm run serve
