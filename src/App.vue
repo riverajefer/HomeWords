@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-container class="grey lighten-5 mb-6">
-      <v-card class="pa-6" style="padding: 15px" shaped>
+      <v-card class="pa-6" style="padding: 25px" shaped>
         <wordRamdon />
         <dict-index />
       </v-card>

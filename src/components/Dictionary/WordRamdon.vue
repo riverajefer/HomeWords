@@ -6,10 +6,10 @@
       elevation="2"
       color="#189AB4"
       dark
-      large
+      x-large
       raised
       rounded
-      >NEW WORD</v-btn
+      >NEW WORD VOCABULARY</v-btn
     >
   </div>
 </template>

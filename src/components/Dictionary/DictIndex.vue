@@ -7,7 +7,7 @@
       <li v-if="definition"><b> Definition: </b> {{ definition }}</li>
       <li v-if="example"><b> Example: </b> {{ example }}</li>
     </ul>
-    <audio v-if="audio" :src="audio" controls></audio>
+    <audio v-if="audio" :src="audio" controls style="height: 300px;"></audio>
   </div>
 </template>
 
@@ -60,9 +60,12 @@ export default {
 </script>
 
 <style scoped>
+.dict {
+  padding: 50px;
+}
 
 h1 {
-  font-size: 2.5em;
+  font-size: 3.2em;
   text-transform: uppercase;
 }
 ul {
@@ -73,7 +76,7 @@ ul {
 li {
   color: #05445E;
   margin: 10px 0px;
-  font-size: 1.2em;
+  font-size: 2em;
 }
 audio {
   margin-bottom: 20px;;
