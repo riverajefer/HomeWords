@@ -43,3 +43,6 @@ cuando se abre el proyecto en Vscode
 npm install
 
 npm run serve
+
+
+https://www.canva.com/colors/color-palettes/summer-splash/

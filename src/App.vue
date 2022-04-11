@@ -1,12 +1,14 @@
 <template>
-  <div id="app">
-    <v-container class="grey lighten-5 mb-6">
-      <v-card class="pa-6" style="padding: 25px" shaped>
-        <wordRamdon />
-        <dict-index />
-      </v-card>
-    </v-container>
-  </div>
+  <v-app>
+    <div id="app">
+      <v-container class="#274472 lighten-5 mb-6">
+        <v-card color="#41729F" dark class="pa-6" style="padding: 25px" shaped>
+          <wordRamdon />
+          <DictIndex />
+        </v-card>
+      </v-container>
+    </div>
+  </v-app>
 </template>
 
 <script>
@@ -23,8 +25,9 @@ export default {
 </script>
 
 <style>
-*{
-  font-family: 'Roboto Condensed', sans-serif;
+@import url('./assets/css/main.css');
+* {
+  font-family: "Roboto Condensed", sans-serif;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -33,5 +36,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  background-color: #274472;
 }
 </style>

@@ -1,16 +1,16 @@
 <template>
   <div class="ram">
-    <br />
     <v-btn
       @click="onGetRandomWord"
       elevation="2"
-      color="#189AB4"
       dark
+      color="#274472"
       x-large
-      raised
       rounded
-      >NEW WORD VOCABULARY</v-btn
     >
+      NEW WORD VOCABULARY
+      <v-icon right dark>mdi-text-shadow </v-icon>
+    </v-btn>
   </div>
 </template>
 

@@ -1,13 +1,13 @@
 <template>
-  <div class="dict">
-    <div class="my-8" style="margin: 15px 0px">
+  <div class="pa-50">
+    <div class="my-5">
       <h1>{{ word }}</h1>
     </div>
     <ul>
-      <li v-if="definition"><b> Definition: </b> {{ definition }}</li>
-      <li v-if="example"><b> Example: </b> {{ example }}</li>
+      <li v-if="definition"><span class="subtitle"> Definition: </span> {{ definition }}</li>
+      <li v-if="example"><span class="subtitle"> Example: </span> {{ example }}</li>
     </ul>
-    <audio v-if="audio" :src="audio" controls style="height: 300px;"></audio>
+    <audio v-if="audio" :src="audio" controls></audio>
   </div>
 </template>
 
@@ -60,12 +60,11 @@ export default {
 </script>
 
 <style scoped>
-.dict {
-  padding: 50px;
-}
 
 h1 {
   font-size: 3.2em;
+  color: #52FA7B;
+  font-weight: bold;
   text-transform: uppercase;
 }
 ul {
@@ -74,11 +73,17 @@ ul {
   margin: 50px 0px;
 }
 li {
-  color: #05445E;
+  color: whitesmoke;
   margin: 10px 0px;
   font-size: 2em;
 }
+.subtitle {
+  color: #56E3BB !important;
+}
 audio {
-  margin-bottom: 20px;;
+  margin-bottom: 20px;
+}
+.v-btn__content {
+  font-size: 2.2em !important;
 }
 </style>
