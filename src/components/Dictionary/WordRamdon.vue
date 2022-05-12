@@ -3,8 +3,8 @@
     <v-btn
       @click="onGetRandomWord"
       elevation="2"
-      dark
-      color="#274472"
+      light
+      color="#41C462"
       x-large
       rounded
     >
@@ -18,7 +18,7 @@
 export default {
   data() {
     return {
-      wordRamdonw: "",
+      wordRamdon: "Book",
     };
   },
   methods: {
@@ -40,10 +40,11 @@ export default {
         console.log("response", response);
         console.log("word", word);
 
-        this.wordRamdonw = word.present;
-        console.log("this.wordRamdonw", this.wordRamdonw);
+        this.wordRamdon = word.present;
 
-        this.$root.$emit("emitWord", this.wordRamdonw);
+        console.log("this.wordRamdon", this.wordRamdon);
+
+        this.$root.$emit("emitWord", this.wordRamdon);
       } catch (error) {
         console.log(error);
       }

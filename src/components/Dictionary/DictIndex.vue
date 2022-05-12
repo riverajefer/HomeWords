@@ -2,6 +2,9 @@
   <div class="pa-50">
     <div class="my-5">
       <h1>{{ word }}</h1>
+      <p>
+        <IconWord :word="word" />
+      </p>
     </div>
     <ul>
       <li v-if="definition"><span class="subtitle"> Definition: </span> {{ definition }}</li>
@@ -12,8 +15,11 @@
 </template>
 
 <script>
+import IconWord from './IconWord.vue';
+
 export default {
-  components: {},
+
+  components: {IconWord},
 
   mounted() {
     this.$root.$on("emitWord", (word) => {
